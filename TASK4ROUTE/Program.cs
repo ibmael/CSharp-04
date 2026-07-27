@@ -18,10 +18,21 @@
             PrintWelcomeMessage();
             Console.WriteLine();
             #endregion
+            #region Task 4
+            PrintBookTitle("Clean Code");
+            Console.WriteLine();
+            #endregion
         }
+
+//Task 03
         static void PrintWelcomeMessage()
         {
             Console.WriteLine("Task 3: Welcome to the Library!");
+        }
+//Task 04
+        static void PrintBookTitle(string title)
+        {
+            Console.WriteLine($"Task 4: Book title: {title}");
         }
     }
 }
