@@ -40,6 +40,12 @@
             Console.WriteLine($"Task 7: {pages7}");
             Console.WriteLine();
             #endregion
+            #region Task 8
+            double[] prices8 = { 25.5, 40.0 };
+            ReplaceArray(ref prices8);
+            Console.WriteLine($"Task 8: {prices8.Length}");
+            Console.WriteLine();
+            #endregion
 
         }
         //Task 03
@@ -66,6 +72,11 @@
         static void AddBonusPagesByRef(ref int pages)
         {
             pages += 50;
+        }
+        //Task 08
+        static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
     }
 }
