@@ -22,9 +22,27 @@
             PrintBookTitle("Clean Code");
             Console.WriteLine();
             #endregion
-        }
+        #region Task 5
+        int pages5 = 400;
+        AddBonusPages(pages5);
+        Console.WriteLine($"Task 5: {pages5}");
+            Console.WriteLine();
+            #endregion
+            #region Task 6
+            double[] prices6 = { 25.5, 40.0 };
+            ApplyDiscount(prices6);
+            Console.WriteLine($"Task 6: {prices6[0]}");
+            Console.WriteLine();
+            #endregion
+            #region Task 7
+            int pages7 = 400;
+            AddBonusPagesByRef(ref pages7);
+            Console.WriteLine($"Task 7: {pages7}");
+            Console.WriteLine();
+            #endregion
 
-//Task 03
+        }
+        //Task 03
         static void PrintWelcomeMessage()
         {
             Console.WriteLine("Task 3: Welcome to the Library!");
@@ -33,6 +51,21 @@
         static void PrintBookTitle(string title)
         {
             Console.WriteLine($"Task 4: Book title: {title}");
+        }
+//Task 05
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+        }
+//Task 06
+        static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+        }
+        //Task 07
+        static void AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
         }
     }
 }
