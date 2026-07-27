@@ -54,6 +54,21 @@
             }
             Console.WriteLine();
             #endregion
+            #region Task 10
+            PrintBookInfo("Clean Code");
+            PrintBookInfo("Refactoring", 464);
+            Console.WriteLine();
+            #endregion
+
+            #region Task 11
+            PrintBookInfo(pages: 500, title: "Design Patterns");
+            Console.WriteLine();
+            #endregion
+
+            #region Task 12
+            PrintAllTitles("Clean Code", "Refactoring", "The Pragmatic Programmer");
+            #endregion
+
 
         }
         //Task 03
@@ -96,6 +111,20 @@
             }
             price = 0;
             return false;
+        }
+        //Task 10/11
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine($"Task 10/11: {title}, {pages} pages");
+        }
+        //Task 12
+
+        static void PrintAllTitles(params string[] titles)
+        {
+            foreach (string title in titles)
+            {
+                Console.WriteLine($"Task 12: {title}");
+            }
         }
 
     }
