@@ -4,7 +4,128 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region Task 1
+            double[] prices = { 25.5, 40.0, 33.75 };
+            Console.WriteLine($"Task 1: {prices[1]}");
+            Console.WriteLine();
+            #endregion
+            #region Task 2
+            int[,] shelfCopies = { { 3, 5 }, { 1, 4 } };
+            Console.WriteLine($"Task 2: {shelfCopies[1, 0]}");
+            Console.WriteLine();
+            #endregion
+            #region Task 3
+            PrintWelcomeMessage();
+            Console.WriteLine();
+            #endregion
+            #region Task 4
+            PrintBookTitle("Clean Code");
+            Console.WriteLine();
+            #endregion
+        #region Task 5
+        int pages5 = 400;
+        AddBonusPages(pages5);
+        Console.WriteLine($"Task 5: {pages5}");
+            Console.WriteLine();
+            #endregion
+            #region Task 6
+            double[] prices6 = { 25.5, 40.0 };
+            ApplyDiscount(prices6);
+            Console.WriteLine($"Task 6: {prices6[0]}");
+            Console.WriteLine();
+            #endregion
+            #region Task 7
+            int pages7 = 400;
+            AddBonusPagesByRef(ref pages7);
+            Console.WriteLine($"Task 7: {pages7}");
+            Console.WriteLine();
+            #endregion
+            #region Task 8
+            double[] prices8 = { 25.5, 40.0 };
+            ReplaceArray(ref prices8);
+            Console.WriteLine($"Task 8: {prices8.Length}");
+            Console.WriteLine();
+            #endregion
+            #region Task 9
+            bool found = TryGetPrice("Clean Code", out double price);
+            if (found)
+            {
+                Console.WriteLine($"Task 9: {price}");
+            }
+            Console.WriteLine();
+            #endregion
+            #region Task 10
+            PrintBookInfo("Clean Code");
+            PrintBookInfo("Refactoring", 464);
+            Console.WriteLine();
+            #endregion
+
+            #region Task 11
+            PrintBookInfo(pages: 500, title: "Design Patterns");
+            Console.WriteLine();
+            #endregion
+
+            #region Task 12
+            PrintAllTitles("Clean Code", "Refactoring", "The Pragmatic Programmer");
+            #endregion
+
+
         }
+        //Task 03
+        static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Task 3: Welcome to the Library!");
+        }
+//Task 04
+        static void PrintBookTitle(string title)
+        {
+            Console.WriteLine($"Task 4: Book title: {title}");
+        }
+//Task 05
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+        }
+//Task 06
+        static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+        }
+        //Task 07
+        static void AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
+        }
+        //Task 08
+        static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
+        }
+        //Task 09
+        static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            price = 0;
+            return false;
+        }
+        //Task 10/11
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine($"Task 10/11: {title}, {pages} pages");
+        }
+        //Task 12
+
+        static void PrintAllTitles(params string[] titles)
+        {
+            foreach (string title in titles)
+            {
+                Console.WriteLine($"Task 12: {title}");
+            }
+        }
+
     }
 }
