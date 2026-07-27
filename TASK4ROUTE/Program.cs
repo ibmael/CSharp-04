@@ -46,6 +46,14 @@
             Console.WriteLine($"Task 8: {prices8.Length}");
             Console.WriteLine();
             #endregion
+            #region Task 9
+            bool found = TryGetPrice("Clean Code", out double price);
+            if (found)
+            {
+                Console.WriteLine($"Task 9: {price}");
+            }
+            Console.WriteLine();
+            #endregion
 
         }
         //Task 03
@@ -78,5 +86,17 @@
         {
             prices = new double[] { 10.0, 12.5, 15.0 };
         }
+        //Task 09
+        static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            price = 0;
+            return false;
+        }
+
     }
 }
